@@ -1,0 +1,26 @@
+.jsoneditor {
+    color: white !important;
+}
+
+.jsoneditor-mode-code {
+    height: 90vh !important;
+    
+}
+
+div.jsoneditor-field {
+    color: #bdbdbd;
+}
+
+div.jsoneditor-value {
+    color: white !important;
+}
+
+div.jsoneditor-field[contenteditable="true"]:focus, div.jsoneditor-field[contenteditable="true"]:hover, div.jsoneditor-value[contenteditable="true"]:focus, div.jsoneditor-value[contenteditable="true"]:hover, div.jsoneditor-field.jsoneditor-highlight, div.jsoneditor-value.jsoneditor-highlight {
+    background-color: #ffee0049 !important;
+    border: 1px solid #ffee0049 !important;
+}
+
+/* Overwriting arrow color */
+.ant-select-arrow {
+    color: white !important;
+}

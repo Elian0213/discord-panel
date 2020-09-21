@@ -1,0 +1,39 @@
+.navbar {
+   // Make it sticky
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100vh;
+   width: 256px;
+
+   // Overwrite some default styling
+   border-right: 0 !important;
+}
+
+// Member info displayed at the top of the navbar
+.userSection {
+   padding: 30px 24px;
+   border-bottom: 1px solid gray;
+   font-size: 17px;
+   display: flex;
+
+   &__info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+
+   &__tag {
+      margin-top: 14px;
+   
+      // Give the <tag> the width of the role-name instead of the username
+      width: fit-content;  
+   }
+
+   img {
+      width: 56px;
+      border-radius: 100%;
+      margin-right: 10px;
+      margin-bottom: 10px;
+   }
+}

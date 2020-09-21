@@ -1,0 +1,30 @@
+{
+    "ExpressPort": 8080,
+    "ErrorLogChannel": "",
+    "ErrorLoggingEnabled": true,
+    "DiscordToken": "",
+    "DiscordAccessKey": "",
+    "DiscordSecretKey": "",
+    "DiscordRedirectUrl": "http://localhost:3000/discord-auth",
+    "DiscordGuildID": "718433475828645928",
+    "DiscordScopes": [
+        "identify",
+        "email",
+        "guilds"
+    ],
+    "Database": {
+        "user": "user",
+        "host": "127.0.0.1",
+        "database": "postgres",
+        "password": "",
+        "port": "5432"
+    },
+    "Rules": {
+      "tableName": "discordpanel.rule_manager",
+      "categoryID": "718451004399419455"
+    },
+    "Permissions": {
+        "defaultRole": ["729761460644872334"],
+        "ruleManager": ["718453523057999952"]
+    }
+}
