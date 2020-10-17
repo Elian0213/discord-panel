@@ -18,7 +18,7 @@ const PostModal = ({ open, close, postRules }) => {
 
   useEffect(() => {
     if (channels.length === 0) {
-      axios.get(`${process.env.REACT_APP_BE_DOMAIN}/rule-manager/channels`, {
+      axios.get(`${process.env.REACT_APP_BACKEND_DOMAIN}/rule-manager/channels`, {
         headers: {
           Authorization: localStorage.getItem(`${process.env.REACT_APP_TOKEN_NAME}`)
         }

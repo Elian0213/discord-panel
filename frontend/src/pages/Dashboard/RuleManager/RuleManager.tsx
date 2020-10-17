@@ -28,7 +28,7 @@ const RuleManager: FC<Props> = () => {
   })
 
   const getRules = async () => {
-    axios.get(`${process.env.REACT_APP_BE_DOMAIN}/rule-manager/get`, {
+    axios.get(`${process.env.REACT_APP_BACKEND_DOMAIN}/rule-manager/get`, {
       headers: {
         Authorization: localStorage.getItem(`${process.env.REACT_APP_TOKEN_NAME}`)
       }
@@ -60,9 +60,9 @@ const RuleManager: FC<Props> = () => {
   const closePostModal = async () => {
     setPostModal(false);
   }
-  
+
   const updateRulesToChannel = async (channelID: string) => {
-    await axios.post(`${process.env.REACT_APP_BE_DOMAIN}/rule-manager/set`, {
+    await axios.post(`${process.env.REACT_APP_BACKEND_DOMAIN}/rule-manager/set`, {
       rules: Rules,
       channel: channelID
     }, {
@@ -84,7 +84,7 @@ const RuleManager: FC<Props> = () => {
       <PostModal open={postModal} close={closePostModal} postRules={updateRulesToChannel} />
       <div className={styles['rule-editor__container']}>
         {
-          hasLoaded ? 
+          hasLoaded ?
           <Editor
             mode="tree"
             className={styles['rule-editor-container']}
@@ -96,7 +96,7 @@ const RuleManager: FC<Props> = () => {
             value={Rules}
             onChange={onChange}
           />
-          : 
+          :
           null
         }
       </div>

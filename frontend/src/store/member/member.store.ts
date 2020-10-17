@@ -21,7 +21,7 @@ const currentMemberModel: MemberModel = {
   // Thunks: Http calls
   getCurrentMember: thunk((actions, token) => {
     return axios
-      .get(`${process.env.REACT_APP_BE_DOMAIN}/auth/init-discord?code=${token}`, )
+      .get(`${process.env.REACT_APP_BACKEND_DOMAIN}/auth/init-discord?code=${token}`, )
       .then(({ data: member }) => {
         actions.setCurrentMember(member);
         localStorage.setItem(
@@ -44,7 +44,7 @@ const currentMemberModel: MemberModel = {
     return axios
       .get(
         `${
-          process.env.REACT_APP_BE_DOMAIN
+          process.env.REACT_APP_BACKEND_DOMAIN
         }/auth/discord?code=${localStorage.getItem(
           `${process.env.REACT_APP_TOKEN_NAME}`
         )}`
